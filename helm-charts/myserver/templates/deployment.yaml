@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: myserver
-          image: 384842694817.dkr.ecr.us-east-2.amazonaws.com/myserver:latest
+          image: "{{ .Values.deployment.image }}:{{ .Values.deployment.tag }}"
           resources:
             requests:
               memory: "32Mi"
@@ -35,4 +35,4 @@ spec:
               memory: "128Mi"
               cpu: "500m"
           ports:
-            - containerPort: 8080
+            - containerPort: {{ .Values.deployment.port }}

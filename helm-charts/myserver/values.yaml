@@ -4,6 +4,11 @@
 
 # replicaCount: 1
 
+deployment:
+  image: 384842694817.dkr.ecr.us-east-2.amazonaws.com/myserver
+  tag: latest
+  port: 8080
+
 # image:
 #   repository: nginx
 #   tag: stable
