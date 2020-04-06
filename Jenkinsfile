@@ -17,9 +17,7 @@ pipeline {
 
         stage('publish'){
             steps { 
-                withAWS(credentials: 'aws_key', region: 'us-west-2') {
                     sh './jenkins_files/publish.sh'
-                }
             }
         }
 
